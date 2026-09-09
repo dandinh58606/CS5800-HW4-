@@ -23,4 +23,11 @@ public class commisionemployee extends employee{
     public void set_gross_sales(double new_gross){
         this.gross_sales = new_gross;
     }
+
+    public String toString() {
+    return get_firstname() + " " + get_lastname() + 
+           " | SSN: " + get_ssn() + 
+           " | Commission Rate: " + (rate * 100) + "%" + 
+           " | Gross Sales: $" + String.format("%.2f", gross_sales);
+}
 }
