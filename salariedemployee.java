@@ -13,4 +13,10 @@ public class salariedemployee extends employee{
     public void set_weekly(double weekly_salary){
         this.weekly_salary = weekly_salary;
     }
+
+    public String toString(){
+        return get_firstname() + " " + get_lastname() + 
+           " | SSN: " + get_ssn() + 
+           " | Weekly Salary: $" + String.format("%.2f", weekly_salary);
+    }
 }
