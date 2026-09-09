@@ -23,4 +23,11 @@ public class hourlyemployee extends employee{
     public void set_hours(int new_hours_worked){
         this.hours_worked = new_hours_worked;
     }
+
+    public String toString(){
+        return get_firstname() + " " + get_lastname() +
+        " | SSN: " + get_ssn() + 
+        " | Hourly Wage: $" + String.format("%.2f", wage) + 
+        " | Hours Worked: " + hours_worked;
+    }
 }
