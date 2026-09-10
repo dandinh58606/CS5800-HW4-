@@ -63,7 +63,11 @@ public class Freelancer implements Payable{
         return wage;
     }
 
+    public void print(){
+        System.out.println(firstname + " " + lastname + " | Wage: " + wage);
+    }
+
     public String getPayeeName(){
-        return (firstname + " " + lastname + " | Wage: " + wage);
+        return firstname + " " + lastname;
     }
 }
