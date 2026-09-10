@@ -5,6 +5,7 @@ public class Freelancer implements Payable{
     private String lastname;
     private double hourly_rate;
     private double hours_worked;
+    private double wage = 0;
 
     public Freelancer(String first, String last, double hour_rate, double working_hours){
         this.firstname = first;
@@ -52,10 +53,17 @@ public class Freelancer implements Payable{
     }
 
     public double calculatePayment(){
-        double wage;
         if(this.hours_worked <= 40){
             wage = this.hours_worked * this.hourly_rate;
         }
+        else{
+            wage = 40 * this.hourly_rate;
+            wage += ((this.hours_worked - 40)* 1.5) * this.hourly_rate;
+        }
         return wage;
+    }
+
+    public String getPayeeName(){
+        return (firstname + " " + lastname + " | Wage: " + wage);
     }
 }
