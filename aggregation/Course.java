@@ -1,14 +1,38 @@
 package aggregation;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Course {
     private String course_name;
-    private Instructor[] instructors;
-    private Textbook[] textbooks;
+    private List<Instructor> instructors;
+    private List<Textbook> textbooks;
 
-    public Course(String class_name, Instructor[] instructor_list, Textbook[] book_list){
+    public Course(String class_name, Instructor main_instructor, Textbook book){
         this.course_name = class_name;
-        this.instructors = instructor_list;
-        this.textbooks = book_list;
+        this.instructors = new ArrayList<>();
+        this.textbooks = new ArrayList<>();
+
+
+    }
+
+    public String get_course_name(){
+        return course_name;
+    }
+
+    public void set_course_name(String new_course){
+        this.course_name = new_course;
+    }
+
+    public void add_Instructor(Instructor new_instructor){
+        if(new_instructor != null){
+            this.instructors.add(new_instructor);
+        }
+    }
+
+    public void add_Textbook(Textbook new_book){
+        if(new_book != null){
+            this.textbooks.add(new_book);
+        }
     }
 
     public void print(){
