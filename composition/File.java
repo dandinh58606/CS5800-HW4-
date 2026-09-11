@@ -24,4 +24,8 @@ public class File {
     public void set_file_type(String new_type){
         this.file_type = new_type;
     }
+
+    public void print(){
+        System.out.println(file_name);
+    }
 }
