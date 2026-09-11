@@ -10,4 +10,18 @@ public class Course {
         this.instructors = instructor_list;
         this.textbooks = book_list;
     }
+
+    public void print(){
+        System.out.println("Course: " + course_name);
+
+        System.out.println("Instructors: ");
+        for(Instructor inst : instructors){
+            System.out.println(" - " + inst.get_first_name() + " " + inst.get_last_name());
+        }
+
+        System.out.println("Textbooks: ");
+        for(Textbook txtbk : textbooks){
+            System.out.println(" - " + txtbk.get_title() + " by " + txtbk.get_author());
+        }
+    }
 }
