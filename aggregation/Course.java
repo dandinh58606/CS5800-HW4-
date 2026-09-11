@@ -12,7 +12,8 @@ public class Course {
         this.instructors = new ArrayList<>();
         this.textbooks = new ArrayList<>();
 
-
+        add_Instructor(main_instructor);
+        add_Textbook(book);
     }
 
     public String get_course_name(){
