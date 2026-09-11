@@ -19,7 +19,7 @@ public class Instructor {
         this.first_name = new_first;
     }
 
-    public String get_last(){
+    public String get_last_name(){
         return last_name;
     }
 
