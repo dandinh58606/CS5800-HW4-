@@ -38,9 +38,9 @@ public class Folder {
     }
 
     public void print(String spacing){
-        System.out.println(spacing + "📁 " + folder_name);
+        System.out.println(spacing + "* " + folder_name);
         for(File file: files){
-            System.out.print(spacing + "  📄 ");
+            System.out.print(spacing + "  - ");
             file.print();
         }
         for(Folder folder : subfolders){
